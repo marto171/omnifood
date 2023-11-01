@@ -24,7 +24,7 @@ Paragraph: 1.6
 --- 02 COLORS
 
 - Primary: #e67e22
-- Tints: #fdf2e9
+- Tints: #fdf2e9, #fae5d3
 - Shades: #cf711f
 - Accents:
 - Greys: #333, #555
@@ -57,9 +57,6 @@ body {
   color: #555;
 }
 
-/******************************/
-/* GENERAL REUSABLE COMPONENTS */
-
 .container {
   max-width: 120rem;
   padding: 0 3.2rem;
@@ -68,7 +65,12 @@ body {
 
 .grid {
   display: grid;
-  gap: 9.6rem;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--center-v {
+  align-items: center;
 }
 
 .grid--2-cols {
@@ -103,6 +105,9 @@ body {
 }
 
 .heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
