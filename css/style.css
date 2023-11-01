@@ -15,7 +15,13 @@ Bold: 700
 - Line heights:
 Default: 1
 Small: 1.05
+Medium: 1.2
 Paragraph: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
 
 --- 02 COLORS
 
@@ -64,7 +70,7 @@ body {
 
 .grid {
   display: grid;
-  gap: 9.6rem 0;
+  gap: 9.6rem;
 }
 
 .grid--2-cols {
@@ -79,13 +85,33 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.heading-primary,
+.heading-secondary {
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  color: #333;
+}
+
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.5px;
-  color: #333;
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
 }
 
 .btn:link,
@@ -255,6 +281,10 @@ body {
 
 .section-how {
   padding: 9.6rem 0;
+}
+
+.step-img {
+  width: 50%;
 }
 
 /******************************/
