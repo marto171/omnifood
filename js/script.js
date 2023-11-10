@@ -34,7 +34,13 @@ const checkFlexGap = function () {
 ////////////////////////////// TOGGLE NAVIGATION /////////////////////////////
 
 const toggleNav = function () {
-  header.classList.toggle('nav-open');
+  if (header.classList.contains('nav-open')) {
+    header.classList.remove('nav-open');
+    document.documentElement.style.overflow = 'auto';
+  } else {
+    header.classList.add('nav-open');
+    document.documentElement.style.overflow = 'hidden';
+  }
 };
 
 //////////////////////////////////////////////////////////////////////////////
@@ -60,7 +66,10 @@ const linkScroll = link =>
       sectionEl.scrollIntoView({ behavior: 'smooth' });
     }
 
-    if (link.classList.contains('main-nav-link')) toggleNav();
+    if (link.classList.contains('main-nav-link')) {
+      header.classList.remove('nav-open');
+      document.documentElement.style.overflow = 'auto';
+    }
   };
 
 //////////////////////////////////////////////////////////////////////////////
